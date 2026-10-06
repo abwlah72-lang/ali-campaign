@@ -1,102 +1,202 @@
+:root {
+    --primary-color: #2563eb;
+    --primary-hover: #1d4ed8;
+    --accent-color: #10b981;
+    --dark-bg: #0f172a;
+    --card-bg: #ffffff;
+    --text-main: #1e293b;
+    --text-muted: #64748b;
+    --bg-gradient: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+    --shadow-soft: 0 10px 30px -5px rgba(0, 0, 0, 0.08);
+    --shadow-hover: 0 20px 40px -10px rgba(37, 99, 235, 0.15);
+}
+
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    font-family: 'Cairo', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 body {
-    font-family: 'Inter', sans-serif, 'Cairo';
     background-color: #f8fafc;
-    color: #1e293b;
-    line-height: 1.6;
+    color: var(--text-main);
+    line-height: 1.8;
+    direction: rtl;
+    text-align: right;
+    overflow-x: hidden;
+}
+
+/* Header & Hero Section */
+header {
+    background: var(--bg-gradient);
+    color: white;
+    padding: 4rem 1rem 3rem 1rem;
+    text-align: center;
+    position: relative;
+    clip-path: ellipse(150% 100% at 50% 0%);
+}
+
+.lang-switch {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.lang-switch button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.lang-switch button:hover {
+    background: white;
+    color: var(--dark-bg);
 }
 
 .container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    max-width: 900px;
+    margin: -40px auto 0 auto;
+    padding: 0 1.5rem 3rem 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
-.narrow {
-    max-width: 800px;
+.hero {
+    background: var(--card-bg);
+    padding: 3rem 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-hover);
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transform: translateY(0);
+    transition: transform 0.3s ease;
 }
 
-.site-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e2e8f0;
-    position: sticky;
-    top: 0;
-    z-index: 100;
+.hero h1 {
+    font-size: 2.4rem;
+    color: var(--dark-bg);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
 }
 
-.nav-container {
+.hero p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Progress Bar Design */
+.progress-container {
+    background: #e2e8f0;
+    border-radius: 15px;
+    height: 28px;
+    width: 100%;
+    margin: 2rem 0;
+    overflow: hidden;
+    padding: 3px;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 100%;
+    width: 10%;
+    border-radius: 12px;
+    transition: width 1s ease-in-out;
+}
+
+.stats {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 70px;
-}
-
-.logo {
+    margin: 1.5rem 0;
     font-weight: 700;
     font-size: 1.2rem;
-    color: #0f172a;
+    color: var(--dark-bg);
+    background: #f1f5f9;
+    padding: 1rem 1.5rem;
+    border-radius: 12px;
+}
+
+/* Stunning Buttons */
+.btn-donate {
+    background: linear-gradient(135deg, var(--accent-color), #059669);
+    color: white;
+    padding: 15px 40px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
     text-decoration: none;
-}.nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    list-style: none;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #475569;
-    font-weight: 500;
-    font-size: 0.95rem;
-}
-
-.hero-section {
-    padding: 80px 0;
-    background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
-}
-
-.section {
-    padding: 70px 0;
-}
-
-.bg-light {
-    background-color: #ffffff;
-}
-
-.section-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 25px;
-    color: #0f172a;
-}
-
-.btn {
     display: inline-block;
-    padding: 12px 24px;
-    border-radius: 6px;
-    font-weight: 600;
-    text-decoration: none;
-    transition: background 0.2s;
+    font-weight: 700;
+    box-shadow: 0 10px 20px -5px rgba(16, 185, 129, 0.4);
+    transition: all 0.3s ease;
 }
 
-.btn-primary {
-    background-color: #2563eb;
-    color: #ffffff;
+.btn-donate:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px -5px rgba(16, 185, 129, 0.6);
 }
 
-.btn-primary:hover {
-    background-color: #1d4ed8;
+/* Sections Styling */
+.section {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 2rem;
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: all 0.3s ease;
 }
 
-.site-footer {
-    background-color: #0f172a;
-    color: #94a3b8;
-    padding: 30px 0;
+.section:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.section h2 {
+    color: var(--dark-bg);
+    margin-bottom: 1.2rem;
+    font-size: 1.6rem;
+    position: relative;
+    padding-bottom: 0.5rem;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.section p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+footer {
     text-align: center;
-    font-size: 0.9rem;
-}
+    padding: 2rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    background: #0f172a;
+    color: #94a3b8;
+    margin-top: 3rem;
+    }
