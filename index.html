@@ -1,23 +1,134 @@
-Ali Al-Farra
-Ali Al-Farra | Supporting an Education Journey in Artificial Intelligence
-Home
-My Story
-My Goal
-Budget
-Updates
-Support
+:root {
+    --primary-color: #2563eb;
+    --accent-color: #10b981;
+    --dark-bg: #0f172a;
+    --text-main: #334155;
+    --text-muted: #64748b;
+    --bg-light: #f8fafc;
+    --card-bg: #ffffff;
+    --border-color: #e2e8f0;
+}
 
-Education is an opportunity to build a future
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Cairo', sans-serif;
+}
 
-Help Me Continue My Education and Build My Future
-A Palestinian student from Gaza pursuing a Bachelor's degree in Artificial Intelligence in the Netherlands.
+body {
+    background-color: var(--bg-light);
+    color: var(--text-main);
+    line-height: 1.7;
+    direction: rtl;
+    text-align: right;
+}
 
-Support My Education
-Read My Story
+header {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: white;
+    padding: 4rem 2rem 3rem 2rem;
+    text-align: center;
+    position: relative;
+}
 
-My Story
-My name is Ali Al-Farra, a Palestinian student from Gaza, completing my high school education with a grade of 92.4%.
+.lang-switch {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
 
-My goal is to study for a Bachelor's degree in Artificial Intelligence at Radboud University in the Netherlands.
+.lang-switch button {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    padding: 6px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
 
-© 2026 Ali Al-Farra. All rights reserved
+.lang-switch button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.container {
+    max-width: 850px;
+    margin: -30px auto 40px auto;
+    padding: 0 20px;
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 2rem;
+    text-align: center;
+    border: 1px solid var(--border-color);
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin: 2rem 0;
+    padding: 15px;
+    background: var(--bg-light);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.progress-container {
+    background: #e2e8f0;
+    border-radius: 10px;
+    height: 12px;
+    width: 100%;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+    height: 100%;
+    width: 10%;
+    border-radius: 10px;
+}
+
+.section {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-color);
+}
+
+.btn-donate {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
+    color: white;
+    padding: 15px 35px;
+    font-size: 1.15rem;
+    font-weight: 800;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-donate:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 20px -3px rgba(37, 99, 235, 0.4);
+}
+
+footer {
+    text-align: center;
+    padding: 3rem 1rem;
+    background: #0f172a;
+    color: #94a3b8;
+    margin-top: 4rem;
+}
