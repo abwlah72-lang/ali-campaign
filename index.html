@@ -1,134 +1,292 @@
-:root {
-    --primary-color: #2563eb;
-    --accent-color: #10b981;
-    --dark-bg: #0f172a;
-    --text-main: #334155;
-    --text-muted: #64748b;
-    --bg-light: #f8fafc;
-    --card-bg: #ffffff;
-    --border-color: #e2e8f0;
-}
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: 'Cairo', sans-serif;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>علي الفرا | رحلة نحو المستقبل في الذكاء الاصطناعي - هولندا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --accent-color: #10b981;
+            --dark-bg: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
 
-body {
-    background-color: var(--bg-light);
-    color: var(--text-main);
-    line-height: 1.7;
-    direction: rtl;
-    text-align: right;
-}
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
 
-header {
-    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
-    color: white;
-    padding: 4rem 2rem 3rem 2rem;
-    text-align: center;
-    position: relative;
-}
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+            direction: rtl;
+            text-align: right;
+        }
 
-.lang-switch {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
+        /* شريط التنبيهات العلوي */
+        .top-ticker {
+            background: linear-gradient(90deg, #1d4ed8, #2563eb, #10b981);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
 
-.lang-switch button {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
-    padding: 6px 15px;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.3s ease;
-}
+        /* شريط التنقل العلوي بين الصفحات */
+        .nav-bar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
 
-.lang-switch button:hover {
-    background: rgba(255, 255, 255, 0.2);
-}
+        .nav-brand {
+            color: white;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
 
-.container {
-    max-width: 850px;
-    margin: -30px auto 40px auto;
-    padding: 0 20px;
-    position: relative;
-    z-index: 10;
-}
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
 
-.hero {
-    background: var(--card-bg);
-    padding: 2.5rem;
-    border-radius: 20px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
-    margin-bottom: 2rem;
-    text-align: center;
-    border: 1px solid var(--border-color);
-}
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
 
-.stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 15px;
-    margin: 2rem 0;
-    padding: 15px;
-    background: var(--bg-light);
-    border-radius: 12px;
-    border: 1px solid var(--border-color);
-}
+        .nav-links a:hover, .nav-links a.active {
+            color: #38bdf8;
+        }
 
-.progress-container {
-    background: #e2e8f0;
-    border-radius: 10px;
-    height: 12px;
-    width: 100%;
-    overflow: hidden;
-    margin-top: 1.5rem;
-}
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 5rem 2rem 5rem 2rem;
+            text-align: center;
+            position: relative;
+        }
 
-.progress-bar {
-    background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
-    height: 100%;
-    width: 10%;
-    border-radius: 10px;
-}
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
 
-.section {
-    background: var(--card-bg);
-    padding: 2rem;
-    border-radius: 20px;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
-    margin-bottom: 1.5rem;
-    border: 1px solid var(--border-color);
-}
+        .hero {
+            background: var(--card-bg);
+            padding: 3rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 30px -5px rgba(0, 0, 0, 0.08);
+            margin-bottom: 2rem;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            position: relative;
+            overflow: hidden;
+        }
 
-.btn-donate {
-    display: inline-block;
-    background: linear-gradient(135deg, var(--primary-color), #1d4ed8);
-    color: white;
-    padding: 15px 35px;
-    font-size: 1.15rem;
-    font-weight: 800;
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 10px 15px -3px rgba(37, 99, 235, 0.3);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+        .verified-badge {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: #10b981;
+            color: white;
+            padding: 8px 25px;
+            font-size: 0.9rem;
+            font-weight: 800;
+            border-bottom-left-radius: 18px;
+        }
 
-.btn-donate:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 14px 20px -3px rgba(37, 99, 235, 0.4);
-}
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin: 2.5rem 0;
+            padding: 20px;
+            background: var(--bg-light);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+        }
 
-footer {
-    text-align: center;
-    padding: 3rem 1rem;
-    background: #0f172a;
-    color: #94a3b8;
-    margin-top: 4rem;
-}
+        .progress-container {
+            background: #e2e8f0;
+            border-radius: 12px;
+            height: 16px;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 1.5rem;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            height: 100%;
+            width: 10%;
+            border-radius: 12px;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .btn-donate {
+            display: inline-block;
+            background: linear-gradient(135deg, #2563eb, #1d4ed8);
+            color: white;
+            padding: 18px 45px;
+            font-size: 1.25rem;
+            font-weight: 800;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 10px 20px -3px rgba(37, 99, 235, 0.4);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn-donate:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 14px 25px -3px rgba(37, 99, 235, 0.5);
+        }
+
+        .btn-whatsapp {
+            display: inline-block;
+            background: #25D366;
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.15rem;
+            font-weight: 700;
+            border-radius: 50px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(37, 211, 102, 0.3);
+            transition: 0.2s;
+            margin-top: 10px;
+        }
+
+        .btn-whatsapp:hover {
+            background: #20ba5a;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #0f172a;
+            color: #94a3b8;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-ticker">
+        ✨ قبول رسمي معتمد: قبول جامعة Radboud University في هولندا لتخصص الذكاء الاصطناعي (معدل 92.4%)
+    </div>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-brand">Ali Al-Farra 🚀</a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">الرئيسية</a></li>
+            <li><a href="grades.html">الوثائق والسجل الأكاديمي</a></li>
+            <li><a href="about.html">قصتي</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div style="max-width: 850px; margin: auto;">
+            <div style="display: inline-block; background: rgba(255,255,255,0.12); backdrop-filter: blur(10px); padding: 8px 20px; border-radius: 30px; font-size: 0.95rem; font-weight: 700; margin-bottom: 1.5rem; border: 1px solid rgba(255,255,255,0.25);">
+                🚀 من حصار غزة إلى قمة التكنولوجيا العالمية
+            </div>
+            <h1 style="font-size: 3rem; font-weight: 900; margin-bottom: 1.2rem; line-height: 1.25;">
+                أنا علي.. أقاتل لأجل حلم يغير وجه المستقبل
+            </h1>
+            <p style="font-size: 1.2rem; opacity: 0.95; max-width: 700px; margin: 0 auto; line-height: 1.8;">
+                بين الركام، وُلد الشغف بالأنظمة الذكية والرياضيات. بمعدل 92.4% وثقت وزارة الخارجية مسيرتي لفتح أبواب أوروبا أمامي. بدعمكم سنعبر خط النهاية.
+            </p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- صندوق التمويل الأساسي -->
+        <div class="hero">
+            <div class="verified-badge">موثق بختم الخارجية 🔒</div>
+            
+            <span style="color: var(--primary-color); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; font-size: 0.95rem; display: block; margin-top: 10px;">صندوق التمويل التعليمي</span>
+            <h2 style="font-size: 2.4rem; margin: 0.5rem 0 1rem 0; color: var(--dark-bg); font-weight: 800;">الاستثمار الأسمى في عقل شاب طموح</h2>
+            <p style="font-size: 1.15rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem auto;">
+                كل مساهمة هي رصاصة أمل تخترق جدار المستحيل لتمكين طالب تميز رغم كل الظروف القاسية في غزة.
+            </p>
+            
+            <div class="stats">
+                <div>
+                    <span style="display: block; font-size: 0.85rem; color: var(--text-muted);">المستهدف الإجمالي</span>
+                    <span style="color: var(--dark-bg); font-size: 1.5rem; font-weight: 800;">€84,000</span>
+                </div>
+                <div>
+                    <span style="display: block; font-size: 0.85rem; color: var(--text-muted);">نسبة الإنجاز</span>
+                    <span style="color: var(--primary-color); font-size: 1.5rem; font-weight: 800;">10%</span>
+                </div>
+                <div>
+                    <span style="display: block; font-size: 0.85rem; color: var(--text-muted);">تم جمع حتى الآن</span>
+                    <span style="color: var(--accent-color); font-size: 1.5rem; font-weight: 800;">€8,400</span>
+                </div>
+            </div>
+
+            <div class="progress-container">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div style="margin-top: 2.5rem; display: flex; flex-direction: column; align-items: center; gap: 15px;">
+                <a href="https://gofundme.com" target="_blank" class="btn-donate">ساهم في مسيرتي الآن 🚀</a>
+                <a href="https://api.whatsapp.com/send?text=ساهم في دعم مستقبل الطالب علي حمزة الفرا (معدل 92.4% الفرع العلمي) لدراسة الذكاء الاصطناعي في هولندا" target="_blank" class="btn-whatsapp">مشاركة الحملة عبر واتساب 💚</a>
+            </div>
+        </div>
+
+        <!-- معاينة سريعة للوثائق والأهداف -->
+        <div class="section" style="text-align: center;">
+            <h2 style="font-size: 2rem; font-weight: 800; color: var(--dark-bg); margin-bottom: 1rem;">الشفافية والتوثيق الأكاديمي</h2>
+            <p style="color: var(--text-muted); font-size: 1.1rem; max-width: 650px; margin: 0 auto 1.5rem auto;">
+                نؤمن بأن الثقة تبدأ بالوضوح. يمكنك تفقد السجل الأكاديمي الكامل، درجات الثانوية العامة المصدقة من وزارة الخارجية، وتفاصيل توزيع ميزانية الحملة بالكامل.
+            </p>
+            <a href="grades.html" style="display: inline-block; background: var(--dark-bg); color: white; padding: 12px 30px; border-radius: 30px; text-decoration: none; font-weight: 700; transition: 0.3s;">عرض الوثائق الرسمية والسجل الأكاديمي 📂</a>
+        </div>
+
+    </div>
+
+    <footer>
+        <div style="max-width: 800px; margin: auto;">
+            <p style="font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 0.5rem;">حملة دعم علي الفرا للتعليم في الذكاء الاصطناعي © 2026</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">صُنع بعناية فائقة وإيمان مطلق بأن العقول العظيمة قادرة على عبور كل الحدود.</p>
+        </div>
+    </footer>
+</body>
+                </html>
