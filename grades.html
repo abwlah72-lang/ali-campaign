@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>السجل الأكاديمي والوثائق الرسمية | علي الفرا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --accent-color: #10b981;
+            --dark-bg: #0f172a;
+            --text-main: #334155;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Cairo', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-main);
+            line-height: 1.7;
+            direction: rtl;
+            text-align: right;
+        }
+
+        .nav-bar {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-brand {
+            color: white;
+            font-weight: 900;
+            font-size: 1.2rem;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: #38bdf8;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: -30px auto 40px auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .section {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+        }
+
+        .grades-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+            background: var(--bg-light);
+            border-radius: 16px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .grades-table th, .grades-table td {
+            padding: 14px 18px;
+            text-align: right;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .grades-table th {
+            background: var(--dark-bg);
+            color: white;
+            font-weight: 700;
+        }
+
+        .grades-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .stamp-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 2px dashed var(--accent-color);
+            padding: 2rem;
+            border-radius: 20px;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: #0f172a;
+            color: #94a3b8;
+            margin-top: 4rem;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="nav-bar">
+        <a href="index.html" class="nav-brand">Ali Al-Farra 🚀</a>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="grades.html" class="active">الوثائق والسجل الأكاديمي</a></li>
+            <li><a href="about.html">قصتي</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div style="max-width: 800px; margin: auto;">
+            <h1 style="font-size: 2.5rem; font-weight: 900; margin-bottom: 1rem;">السجل الأكاديمي الرسمي والموثق</h1>
+            <p style="font-size: 1.1rem; opacity: 0.9;">تفاصيل درجات الثانوية العامة (التوجيهي 2026) للفرع العلمي مصدقة رسمياً[cite: 7, 10].</p>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <!-- تفاصيل الطالب -->
+        <div class="section">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--dark-bg); margin-bottom: 1.5rem;">معلومات الطالب الرسمية</h2>
+            <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; background: var(--bg-light); padding: 20px; border-radius: 16px; border: 1px solid var(--border-color);">
+                <div><strong>اسم الطالب:</strong> علي حمزة محمد الفرا[cite: 10]</div>
+                <div><strong>الفرع:</strong> العلمي[cite: 10]</div>
+                <div><strong>المعدل التراكمي:</strong> <span style="color: var(--accent-color); font-weight: 900;">92.4% (ناجح)</span>[cite: 10]</div>
+                <div><strong>المديرية:</strong> خان يونس[cite: 10]</div>
+            </div>
+        </div>
+
+        <!-- جدول الدرجات -->
+        <div class="section">
+            <h2 style="font-size: 1.8rem; font-weight: 800; color: var(--dark-bg); margin-bottom: 0.5rem;">كشف علامات المباحث الثانوية</h2>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 1rem;">صادر عن وزارة التربية والتعليم العالي بدولة فلسطين[cite: 10]</p>
+            
+            <table class="grades-table">
+                <thead>
+                    <tr>
+                        <th>المبحث الدراسي</th>
+                        <th>العلامة المستحقة</th>
+                        <th>النهاية العظمى</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>الرياضيات (أساسي)</strong></td>
+                        <td style="color: var(--accent-color); font-weight: 800;">185[cite: 10]</td>
+                        <td>200[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>اللغة الإنجليزية</strong></td>
+                        <td style="color: var(--primary-color); font-weight: 800;">93[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الكيمياء</strong></td>
+                        <td style="color: var(--primary-color); font-weight: 800;">93[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>اللغة العربية</strong></td>
+                        <td style="font-weight: 700;">92[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الفيزياء</strong></td>
+                        <td style="font-weight: 700;">92[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>تكنولوجيا المعلومات</strong></td>
+                        <td style="font-weight: 700;">92[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>التربية الدينية</strong></td>
+                        <td style="font-weight: 700;">90[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                    <tr>
+                        <td><strong>الأحياء</strong></td>
+                        <td style="font-weight: 700;">89[cite: 10]</td>
+                        <td>100[cite: 10]</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- ختم الخارجية -->
+        <div class="stamp-box">
+            <h3 style="color: #065f46; font-weight: 800; margin-bottom: 8px;">🔒 موثق رسمياً ومعتمد</h3>
+            <p style="color: #047857; font-size: 1rem;">تم اعتماد وتصديق كشف العلامات رسمياً من قِبل **وزارة الخارجية والمغتربين بدولة فلسطين** لضمان أعلى معايير الموثوقية للمبرعين[cite: 10].</p>
+        </div>
+
+    </div>
+
+    <footer>
+        <div style="max-width: 800px; margin: auto;">
+            <p style="font-weight: 700; font-size: 1.1rem; color: white; margin-bottom: 0.5rem;">حملة دعم علي حمزة الفرا للتعليم في الذكاء الاصطناعي © 2026</p>
+            <p style="font-size: 0.9rem; opacity: 0.8;">مصداقية تامة، وشفافية مطلقة في كل رقم ووثيقة.</p>
+        </div>
+    </footer>
+</body>
+  </html>
